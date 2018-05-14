@@ -50,9 +50,6 @@ df['Default'] = df['Default'].astype(int)
 #print(df.apply(lambda x: x.isnull().sum(), axis=0))
 print(df.groupby('Default').count())
 
-import sys
-sys.exit(0)
-
 df.drop(['MortInsPerc','MortInsType','CoCreditScore'], axis=1, inplace=True)
 df.dropna(inplace=True)
 
